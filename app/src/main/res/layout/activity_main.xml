@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.rkarthikraj.clientserversample.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        android:textStyle="normal|bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/getID"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:id="@+id/textView2"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/getID"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:id="@+id/textView3"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/getName"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/getName"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/getPlace"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="INS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:id="@+id/insertBT"
+        android:onClick="onClickInsert"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:layout_below="@+id/getPlace"
+        android:layout_alignStart="@+id/updateBT"
+        android:textSize="10sp" />
+
+    <Button
+        android:text="UPD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/updateBT"
+        android:onClick="onClickUpdate"
+        android:textSize="10sp"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/insertBT"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="DEL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:id="@+id/deleteBT"
+        android:onClick="onClickDelete"
+        android:textSize="10sp"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/insertBT"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="SEL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/selectBT"
+        android:onClick="onClickSelect"
+        android:textSize="10sp"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/deleteBT"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="CLS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/clearBT"
+        android:layout_below="@+id/selectBT"
+        android:layout_alignParentEnd="true"
+        android:onClick="onClickClear"
+        android:textStyle="normal|bold"
+        android:textSize="10sp" />
+
+    <TextView
+        android:text="For Select and Delete use ID alone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:textStyle="normal|bold"
+        android:textAlignment="textEnd"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="For Update use ID, Name, Place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textStyle="normal|bold"
+        android:textAlignment="textEnd"
+        android:textSize="14sp"
+        android:layout_above="@+id/textView6"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="For Insert dont use ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textAlignment="textEnd"
+        android:textStyle="normal|bold"
+        android:layout_above="@+id/textView5"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/putName"
+        android:layout_alignBaseline="@+id/updateBT"
+        android:layout_alignBottom="@+id/updateBT"
+        android:layout_alignStart="@+id/textView3"
+        android:textStyle="normal|bold"
+        android:textSize="14sp" />
+
+    <TextView
+        android:text="Place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/putPlace"
+        android:textStyle="normal|bold"
+        android:textSize="14sp"
+        android:layout_alignBottom="@+id/updateBT"
+        android:layout_alignStart="@+id/putName" />
+
+    <TextView
+        android:text="Output_Select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_above="@+id/updateBT"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
